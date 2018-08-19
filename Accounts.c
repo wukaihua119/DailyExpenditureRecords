@@ -22,7 +22,7 @@ int main(void){
 
 	int choose;
 	
-	printf( "1 for input and output, 2 for outpit.\n" );	
+	printf( "\"1\" for input and output, \"2\" for outpit.\n" );	
 	scanf( "%d", &choose );
 
 	switch( choose ){
