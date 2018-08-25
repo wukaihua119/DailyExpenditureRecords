@@ -11,7 +11,10 @@ It is a program that can record your daily expense, income and compute your acco
 Download the *.c, *.h and Makefile.
 
 To compile DailyAccountProgram.
-<pre><code>$ make Accounts
+<pre><code>
+$ make Accounts
+or
+$ gcc -c Accounts Accounts.c IN.c OUT.c
 </code></pre>
 
 To execuate DailyAccountProgram.
