@@ -8,7 +8,7 @@ It is a program that can record your daily expense, income and compute your acco
 * Calculate you total balance and total expense automatically.
 
 ## Building
-Download the *.c, *h and Makefile.
+Download the *.c, *.h and Makefile.
 
 To compile DailyAccountProgram.
 <pre><code>$ make Accounts
