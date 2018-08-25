@@ -14,7 +14,7 @@ To compile DailyAccountProgram.
 <pre><code>
 $ make Accounts
 or
-$ gcc -c Accounts Accounts.c IN.c OUT.c
+$ gcc -o Accounts Accounts.c IN.c OUT.c
 </code></pre>
 
 To execuate DailyAccountProgram.
