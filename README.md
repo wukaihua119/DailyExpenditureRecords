@@ -6,9 +6,12 @@ Download the *.c, *h and Makefile.
 
 To compile DailyAccountProgram.
 <pre><code>$ make Accounts
+</code></pre>
 
 To execuate DailyAccountProgram.
 <pre><code>$ ./Accounts
+</code></pre>
+
 # Instructions
 Press "1" to input your cash flow and output your total balance and expense.
 
