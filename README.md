@@ -5,10 +5,10 @@ It is a program that can record your daily expense, income and compute your acco
 Download the *.c, *h and Makefile.
 
 To compile DailyAccountProgram.
-$ make Accounts
+<pre><code>$ make Accounts
 
 To execuate DailyAccountProgram.
-$./Accounts
+<pre><code>$ ./Accounts
 # Instructions
 Press "1" to input your cash flow and output your total balance and expense.
 
