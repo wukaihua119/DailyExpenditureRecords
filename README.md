@@ -3,8 +3,10 @@ It is a program that can record your daily expense, income and compute your acco
 
 # Building
 Download the *.c, *h and Makefile.
+
 To compile DailyAccountProgram.
 $ make Accounts
+
 To execuate DailyAccountProgram.
 $./Accounts
 # Instructions
