@@ -28,6 +28,6 @@ To execuate DailyAccountProgram.
 * The length of any of strings that you input must be within 19 characters, of which the last character is '\0'.
 
 ### Input data
-
+![image5] (https://github.com/EasonWuTPE/DailyAccountProgram/blob/master/pics/%E5%9C%96%E7%89%875.png)
 ### Output
-
+![image1] (https://github.com/EasonWuTPE/DailyAccountProgram/blob/master/pics/%E5%9C%96%E7%89%871.png)
