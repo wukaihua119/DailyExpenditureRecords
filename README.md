@@ -27,5 +27,7 @@ To execuate DailyAccountProgram.
 
 * The length of any of strings that you input must be within 19 characters, of which the last character is '\0'.
 
+### Input data
 
+### Output
 
