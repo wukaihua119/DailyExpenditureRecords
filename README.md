@@ -30,4 +30,4 @@ To execuate DailyAccountProgram.
 ### Input data
 ![圖片5](https://github.com/EasonWuTPE/DailyAccountProgram/blob/master/pics/%E5%9C%96%E7%89%875.png)
 ### Output
-![圖片1](https://github.com/EasonWuTPE/DailyAccountProgram/blob/master/pics/%E5%9C%96%E7%89%871.png)
+![圖片1](https://github.com/EasonWuTPE/DailyAccountProgram/blob/master/pics/%E5%9C%96%E7%89%872.png)
