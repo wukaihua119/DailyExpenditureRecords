@@ -13,12 +13,12 @@ int main( void ){
 		/* Input data and print it out */
 		case 1: 
 			IN_input( );
-			printf( "\n***Your account show below detailly.***\n" );
+			printf( "\n\n***Your account show below detailly.***\n" );
 			OUT_output( );
 			break;
 		/*print out the account */
 		case 2:
-			printf( "\n***Your account show below detailly.***\n" );
+			printf( "\n\n***Your account show below detailly.***\n" );
 			OUT_output( );
 			break;
 		/* run into error */
