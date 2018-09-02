@@ -19,7 +19,7 @@ void IN_input( void ){
 
     struct item detail;
 
-	FILE *fPtr = fopen( "accountsAugust.dat", "a+"); /*File name should change by yourself.*/
+	FILE *fPtr = fopen(  ACCOUNT_NAME, "a+"); /*File name should change by yourself.*/
 
  	if (  fPtr  == NULL ) {
         printf( "No File.\n" );

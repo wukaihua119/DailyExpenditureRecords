@@ -1,6 +1,7 @@
 #include<stdio.h>
 #ifndef OUT_H
 #define OUT_H
+#define ACCOUNT_NAME "accountSEP18.dat"
 
 
 void OUT_output( void );

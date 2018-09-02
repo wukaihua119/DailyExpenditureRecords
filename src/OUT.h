@@ -1,4 +1,6 @@
 #include<stdio.h>
+#define ACCOUNT_NAME "accountSEP18.dat"
+
 #ifndef OUT_H
 #define OUT_H
 

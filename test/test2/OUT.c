@@ -20,7 +20,7 @@ void OUT_output(void){
     detail.balance = 0; /* initialize value */
 
     /* a file pointer */
-    FILE *fPtr = fopen( "accountsAugust.dat", "r+");
+    FILE *fPtr = fopen( ACCOUNT_NAME, "r+");
 
     if ( fPtr == NULL ){
 
