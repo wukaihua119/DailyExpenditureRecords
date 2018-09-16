@@ -16,6 +16,7 @@ struct item{
     size_t balance;
 };
 
+struct item detail;
 
 /* function prototype */
 void IN_input( void );
