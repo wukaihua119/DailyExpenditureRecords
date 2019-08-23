@@ -1,4 +1,4 @@
-# DailyAccountProgram
+# DailyExpenditureRecords
 It is a program that can record your daily expense, income and compute your account balance.
 
 ## Features
