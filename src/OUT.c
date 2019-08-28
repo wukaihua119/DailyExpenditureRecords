@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h> 
 #include "OUT.h"
 #include "IN.h"
 
@@ -60,4 +61,9 @@ int calexpense( size_t cal_expense, size_t cal_Ccash){
 int calbalance( size_t cal_Dcash, size_t cal_Ccash, size_t cal_balance ){
 
     return cal_balance + cal_Dcash - cal_Ccash;
+}
+
+/* redirect to txt file */ 
+void out_to_file(void){ 
+
 }
