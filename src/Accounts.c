@@ -21,6 +21,10 @@ int main( void ){
 			printf( "\n\n***Your account show below detailly.***\n" );
 			OUT_output( );
 			break;
+		case 3:
+			printf( "\n\n***Redirecting output to a file.***\n" );
+			out_to_file( );
+			break;
 		/* run into error */
 		default:
 			printf( "ERROR\n" );
