@@ -1,6 +1,5 @@
 # Ignore files 
-src/**/*.out
-src/**/*.exe
-src/**/*.o
-src/**/*.txt
-src/**/*.dat
+DailyExpenditureRecords/src/**/*.out
+DailyExpenditureRecords/src/**/*.exe 
+DailyExpenditureRecords/src/**/*.o 
+DailyExpenditureRecords/src/**/*.txt 

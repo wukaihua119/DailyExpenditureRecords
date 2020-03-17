@@ -6,6 +6,8 @@ int main( void ){
 
 	int choose;
 	
+    printf("\nThe DailyExpenditure is starting...\n"); 
+    printf("\nWelcome to DailyExpenditure...\n"); 
 	printf( "\"1\" for input and output, \"2\" for output.\n" );	
 	scanf( "%d", &choose );
 
