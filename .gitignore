@@ -1,0 +1,6 @@
+# Ignore files 
+src/**/*.out
+src/**/*.exe
+src/**/*.o
+src/**/*.txt
+src/**/*.dat
