@@ -1,33 +1,41 @@
-# DailyExpenditureRecords
-It is a program that can record your daily expense, income and compute your account balance.
+# <center> DailyExpenditureRecords</center>
+You need a tool to record daily expenditure and your cash flow if you have the hard time saving money. The DailyExpenditureRecords is born for those who spend their money unnoticeable. 
+
+## Introduction 
+The DailyExpenditureRecords is an application that record your daily expenditure and track your cash flow in order to make good use of your money and more effeciently. <br/> 
+This application is developed using C on Ubuntu 18.04 LTS. 
+<br/> 
 
 ## Features
 * Record daily expense.
 * Record daily income.
-* Uncover and record the detail of cash flow.
+* Uncover and track the detail of cash flow.
 * Calculate your total balance and expense automatically.
 
-## Building
-Download the *.c, *.h and Makefile in directory of "src".
+## How to use 
+To use this application, you need to clone this repository. 
+```
+    $ git clone https://github.com/wukaihua119/DailyExpenditureRecords.git  
+``` 
+Move to the root directory of this project. Run the command below if you are the first time to execute this application. 
+```
+    // only compile the souce code. 
+    $ make build  
+```
+or 
+```
+    // not only compile the source code but also execute the binary code to run the application. 
+    $ make build_exec 
+```
 
-To compile DailyAccountProgram.
-<pre><code>$ make Accounts
-or
-$ gcc -o Accounts Accounts.c IN.c OUT.c
-</code></pre>
+<br/> 
 
-To execuate DailyAccountProgram.
-<pre><code>$ ./Accounts
-</code></pre>
+Run the command ``` $ make exec ``` to run this application. 
+<br/> 
+<br/> 
+<br/> 
+<br/> 
 
-## Instructions
-* Press "1" to input your cash flow and output your total balance and expense.
-
-* Press "2" to output your total balance, expense and other information that you inputs.
-
-* The length of any of strings that you input must be within 19 characters, of which the last character is '\0'.
-
-### Input data
-![圖片5](https://github.com/wukaihua119/DailyAccountProgram/blob/master/pics/%E5%9C%96%E7%89%875.png)
-### Output
-![圖片1](https://github.com/wukaihua119/DailyAccountProgram/blob/master/pics/%E5%9C%96%E7%89%872.png)
+### Todo list 
+* Multiple file management system 
+* Output the detail results into file 
