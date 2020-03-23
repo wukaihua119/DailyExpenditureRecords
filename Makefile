@@ -18,9 +18,9 @@ build_and_exec: build clean
 	cd $(CODE_PATH) && ./Accounts 
 
 build:  Accounts 
-	echo 'Compile the source code...' 
+	@echo 'Compile the source code...' 
 	cd $(CODE_PATH)  
-	echo 'Done...' 
+	@echo 'Done...' 
 
 Accounts: Accounts.o IN.o OUT.o
 	cd $(CODE_PATH) && $(CC) -o Accounts $(FLAG) Accounts.o ./libs/IN.o ./libs/OUT.o 
@@ -35,6 +35,6 @@ OUT.o: $(LIBS_CODE_PATH)OUT.h $(LIBS_CODE_PATH)OUT.c
 	cd $(LIBS_CODE_PATH) && $(CC) $(FLAG) -c OUT.c
 
 clean:
-	echo 'Cleaning code...' 
+	@echo 'Cleaning code...' 
 	$(RM) -rf $(CODE_PATH)*.o &&  $(RM) -rf $(LIBS_CODE_PATH)*.o
-	echo 'Done...' 
+	@echo 'Done...' 
