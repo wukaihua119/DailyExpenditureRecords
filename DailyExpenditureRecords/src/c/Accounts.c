@@ -8,8 +8,8 @@ void sub_page( FILE *FILEPTR, int choose );
 
 int main( void ){ 
 
-int choose;
-FILE *FILEPTR; 
+    int choose;
+    FILE *FILEPTR; 
 
    printf("\nThe DailyExpenditure is starting...\n"); 
    printf("\nWelcome to DailyExpenditure...\n\n"); 
