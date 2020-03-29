@@ -50,13 +50,11 @@ void OUT_output( FILE *fPtr ){
 
 /* calculate total expense */
 int calexpense( size_t cal_expense, size_t cal_Ccash){
-
     return cal_expense + cal_Ccash;
 }
 
 /* calculate balance */
 int calbalance( size_t cal_Dcash, size_t cal_Ccash, size_t cal_balance ){
-
     return cal_balance + cal_Dcash - cal_Ccash;
 }
 
