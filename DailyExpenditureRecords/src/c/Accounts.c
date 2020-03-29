@@ -11,18 +11,18 @@ int main( void ){
     int choose;
     FILE *FILEPTR; 
 
-   printf("\nThe DailyExpenditure is starting...\n"); 
-   printf("\nWelcome to DailyExpenditure...\n\n"); 
+    printf("\nThe DailyExpenditure is starting...\n"); 
+    printf("\nWelcome to DailyExpenditure...\n\n"); 
    
-   main_page( FILEPTR ); 
-   printf( "\"1\" for input and output, \"2\" for output, \"3\" for return to last menu, \"0\" for end.\n" );	
-   scanf( "%d", choose ); 
-   sub_page( FILEPTR, choose ); 
+    main_page( FILEPTR ); 
+    printf( "\"1\" for input and output, \"2\" for output, \"3\" for return to last menu, \"0\" for end.\n" );	
+    scanf( "%d", choose ); 
+    sub_page( FILEPTR, choose ); 
    
-   printf( "\n\n\"1\" for input and output, \"2\" for output, \"3\" for return to last menu, \"0\" for end.\n" );	
-   scanf( "%d", choose ); 
+    printf( "\n\n\"1\" for input and output, \"2\" for output, \"3\" for return to last menu, \"0\" for end.\n" );	
+    scanf( "%d", choose ); 
    
-   while( choose != 0 ){ 
+    while( choose != 0 ){ 
         if( choose == 3 ){ 
             main_page( FILEPTR ); 
         }else if( choose == 1 || choose == 2 ){ 
@@ -84,6 +84,5 @@ void sub_page( FILE *FILEPTR, int choose ){
 
     }else 
         printf( "Data sheet cannot be opened or created.\n" );  
-
 
 }
