@@ -3,12 +3,9 @@
 #include "OUT.h"
 #include "IN.h"
 
-void OUT_output(void){
+void OUT_output( FILE *fPtr ){
     detail.total_expense = 0; /* initialize value */
     detail.balance = 0; /* initialize value */
-
-    /* a file pointer */
-    FILE *fPtr = fopen( ACCOUNT_NAME, "r+");
 
     if ( fPtr == NULL ){
 
