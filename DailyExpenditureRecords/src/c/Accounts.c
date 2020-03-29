@@ -16,11 +16,11 @@ int main( void ){
    
     main_page( FILEPTR ); 
     printf( "\"1\" for input and output, \"2\" for output, \"3\" for return to last menu, \"0\" for end.\n" );	
-    scanf( "%d", choose ); 
+    scanf( "%d", &choose ); 
     sub_page( FILEPTR, choose ); 
    
     printf( "\n\n\"1\" for input and output, \"2\" for output, \"3\" for return to last menu, \"0\" for end.\n" );	
-    scanf( "%d", choose ); 
+    scanf( "%d", &choose ); 
    
     while( choose != 0 ){ 
         if( choose == 3 ){ 

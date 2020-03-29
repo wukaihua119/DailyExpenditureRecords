@@ -4,6 +4,7 @@
 #include "IN.h"
 
 void OUT_output( FILE *fPtr ){
+
     detail.total_expense = 0; /* initialize value */
     detail.balance = 0; /* initialize value */
 

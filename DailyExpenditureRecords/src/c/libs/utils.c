@@ -17,7 +17,7 @@ FILE *OpenExistingDataSheet( void ){
     char PATH[500] = "./databases/"; 
     char FILENAME[30]; 
 
-    printf( "Input the name of your exsiting data sheet. >> " ); 
+    printf( "Input the name of your exsiting data sheet without extension. >> " ); 
     scanf( "%s", FILENAME ); 
     strcat( PATH, FILENAME ); 
 

@@ -4,7 +4,7 @@
 #define OUT_H
 
 
-void OUT_output( void );
+void OUT_output( FILE *FILEPTR );
 int calexpense( size_t cal_expense, size_t cal_Ccash );
 int calbalance( size_t cal_Dcash, size_t cal_Ccash,size_t cal_balance );
 void out_to_file( void ); /* build redirecting output function */ 
