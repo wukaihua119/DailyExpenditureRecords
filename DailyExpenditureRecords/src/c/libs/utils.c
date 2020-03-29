@@ -21,6 +21,6 @@ FILE *OpenExistingDataSheet( void ){
     scanf( "%s", FILENAME ); 
     strcat( PATH, FILENAME ); 
 
-return fopen( PATH, "r+" ); 
+    return fopen( PATH, "r+" ); 
 
 }
