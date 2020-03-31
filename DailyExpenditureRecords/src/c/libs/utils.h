@@ -4,6 +4,8 @@
 #include <stdio.h> 
 #include <string.h> 
 
+#define show_databases "#!/bin/bash \n echo 'Here are the existing databases...'\n ls ./databases" 
+
 /* define a struct */
 struct item{
     size_t date;
@@ -19,7 +21,9 @@ struct item{
 struct item detail;
 
 /* function prototype */ 
-FILE *CreateNewDataSheet(void); 
-FILE *OpenExistingDataSheet(void); 
+char *getFileName( void ); 
+void Options( char *PATH, int choose );  
+char *CreateNewDataSheet(void); 
+char *OpenExistingDataSheet(void); 
 
 #endif 
