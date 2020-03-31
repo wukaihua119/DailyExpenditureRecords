@@ -3,17 +3,18 @@
 #include "OUT.h"
 #include "IN.h"
 
-void OUT_output(void){
+void OUT_output( char *PATH ){
+
     detail.total_expense = 0; /* initialize value */
     detail.balance = 0; /* initialize value */
 
-    /* a file pointer */
-    FILE *fPtr = fopen( ACCOUNT_NAME, "r+");
+    FILE *fPtr = fopen( PATH, "r+" ); 
 
     if ( fPtr == NULL ){
 
         /* no files */
         printf("%s\n", "No files.");
+
     }else {
 
         /* print the titles */
@@ -46,22 +47,24 @@ void OUT_output(void){
 
     } /* end if else */
 
-    fclose( fPtr ); /* fclose to close file pointer */
-
+    fclose( fPtr ); 
 } /* end OUT function */ 
 
 
 /* calculate total expense */
 int calexpense( size_t cal_expense, size_t cal_Ccash){
-
     return cal_expense + cal_Ccash;
 }
 
 /* calculate balance */
 int calbalance( size_t cal_Dcash, size_t cal_Ccash, size_t cal_balance ){
-
     return cal_balance + cal_Dcash - cal_Ccash;
 }
+
+/* calculate the expenditure of that month */ 
+void caldetail( void ){ 
+
+} 
 
 /* redirect to txt file */ 
 void out_to_file(void){ 

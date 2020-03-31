@@ -1,38 +1,34 @@
 #include<stdio.h>
 #include "./libs/IN.h"
 #include "./libs/OUT.h"
+#include "./libs/utils.h"
+
 
 int main( void ){ 
 
-	int choose;
-	
+    int choose;
+    char *PATH; 
+
     printf("\nThe DailyExpenditure is starting...\n"); 
-    printf("\nWelcome to DailyExpenditure...\n"); 
-	printf( "\"1\" for input and output, \"2\" for output.\n" );	
-	scanf( "%d", &choose );
-
-	switch( choose ){
-		/* Input data and print it out */
-		case 1: 
-			IN_input( );
-			printf( "\n\n***Your account show below detailly.***\n" );
-			OUT_output( );
-			break;
-		/*print out the account */
-		case 2:
-			printf( "\n\n***Your account show below detailly.***\n" );
-			OUT_output( );
-			break;
-		case 3:
-			printf( "\n\n***Redirecting output to a file.***\n" );
-			out_to_file( );
-			break;
-		/* run into error */
-		default:
-			printf( "ERROR\n" );
-			break;
-	}	
-
-	return 0;
+    printf("\n\nWelcome to DailyExpenditure...\n\n\n\n"); 
+    
+    PATH = getFileName(); 
+    printf( "\n\n\"1\" to input and output,\n\"2\" to output, \n\"3\" to open or recreate new file, \n\"0\" to end.\n" ); 
+    scanf( "%d", &choose ); 
+   
+    while( choose != 0 ){ 
+        if( choose == 3 ) 
+            PATH = getFileName(); 
+        else 
+            Options( PATH, choose ); 
+         
+        printf( "\n\n\"1\" to input and output,\n\"2\" to output, \n\"3\" to open or recreate new file, \n\"0\" to end.\n" ); 
+        scanf( "%d", &choose ); 
+    }
+    
+    printf( "Bye!\n" ); 
+    free( PATH ); 
+    return 0;
 }
+
 

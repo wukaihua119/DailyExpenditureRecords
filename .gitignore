@@ -3,3 +3,6 @@ DailyExpenditureRecords/src/**/*.out
 DailyExpenditureRecords/src/**/*.exe 
 DailyExpenditureRecords/src/**/*.o 
 DailyExpenditureRecords/src/**/*.txt 
+*.out
+*.exe
+*.o
