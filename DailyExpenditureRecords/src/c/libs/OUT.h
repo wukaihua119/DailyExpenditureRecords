@@ -3,6 +3,9 @@
 #ifndef OUT_H
 #define OUT_H
 
+int D_eating; 
+int D_expense; 
+int D_moto; 
 
 void OUT_output( char * );
 int calexpense( size_t cal_expense, size_t cal_Ccash );
