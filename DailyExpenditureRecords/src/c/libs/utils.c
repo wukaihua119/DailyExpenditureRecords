@@ -38,7 +38,7 @@ void Options( char *PATH, int choose ){
             case 4: 
                 printf( "%s", "\n**********************************************\n"); 
                 printf( " detail expenditure of this month shows below.\n\n" ); 
-                caldetail(); 
+                getdetail(); 
                 break; 
             /* run into error */
             default:
