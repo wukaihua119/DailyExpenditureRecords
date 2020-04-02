@@ -5,7 +5,7 @@
 
 int D_eating; 
 int D_expense; 
-int D_moto; 
+int D_trans_fee; 
 
 void OUT_output( char * );
 int calexpense( size_t cal_expense, size_t cal_Ccash );
