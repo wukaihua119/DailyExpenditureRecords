@@ -5,8 +5,9 @@
 
 void OUT_output( char *PATH ){
 
-    detail.total_expense = 0; /* initialize value */
-    detail.balance = 0; /* initialize value */
+    D_expense = D_eating = D_trans_fee = 0; /* initialize the global vars */ 
+    
+    detail.total_expense = detail.balance = 0; /* initialize value */
 
     FILE *fPtr = fopen( PATH, "r+" ); 
 
@@ -27,7 +28,8 @@ void OUT_output( char *PATH ){
 
         /* calculate total expense and balance */
         detail.total_expense = calexpense( detail.total_expense, detail.Ccash );
-        detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );        
+        detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );     
+        caldetail( detail.Ditem, detail.Dcash ); 
 
         while( !feof( fPtr ) ){
 
@@ -41,7 +43,8 @@ void OUT_output( char *PATH ){
             
             /* calculate total expense and balance */
             detail.total_expense = calexpense( detail.total_expense, detail.Ccash );
-            detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );        
+            detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );    
+            caldetail( detail.Ditem, detail.Dcash );
 
         } /* end while */       
 
@@ -62,8 +65,20 @@ int calbalance( size_t cal_Dcash, size_t cal_Ccash, size_t cal_balance ){
 }
 
 /* calculate the expenditure of that month */ 
-void caldetail( void ){ 
-
+void caldetail( char *Ditem, size_t Dcash ){ 
+    if( Ditem == "eating" ) 
+        D_eating += Dcash; 
+    else if( Ditem == "expense" ) 
+        D_expense += Dcash; 
+    else if( Ditem == "transfee" ) 
+        D_trans_fee += Dcash; 
+} 
+void getdetail( void ){ 
+    printf( "\nYour expenditure detail show below:\n" ); 
+    printf( "%10s : %5d\n", "eating", D_eating ); 
+    printf( "%10s : %5d\n", "expense", D_expense ); 
+    printf( "%10s : %5d\n", "transfee", D_trans_fee ); 
+    printf( "\n" ); 
 } 
 
 /* redirect to txt file */ 
