@@ -17,7 +17,7 @@ exec:
 build_and_exec: build clean 
 	./Accounts 
 
-build:  Accounts clean
+build:  Accounts clean 
 	@echo 'Compile the source code...' 
 	@echo 'Done...' 
 

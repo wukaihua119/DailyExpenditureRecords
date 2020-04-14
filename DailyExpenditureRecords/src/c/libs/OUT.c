@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include<stdlib.h> 
 #include "OUT.h"
-#include "IN.h"
 
 void OUT_output( char *PATH ){
 
-    D_expense = D_eating = D_trans_fee = 0; /* initialize the global vars */ 
-    
-    detail.total_expense = detail.balance = 0; /* initialize value */
+    /* initialize value */
+    detail.total_expense = detail.balance = detail.T_expense = 
+	    detail.T_transfee = detail.T_eating = 0; 
 
     FILE *fPtr = fopen( PATH, "r+" ); 
 
@@ -29,7 +28,7 @@ void OUT_output( char *PATH ){
         /* calculate total expense and balance */
         detail.total_expense = calexpense( detail.total_expense, detail.Ccash );
         detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );     
-        caldetail( detail.Ditem, detail.Dcash ); 
+        caldetail( &detail ); 
 
         while( !feof( fPtr ) ){
 
@@ -44,9 +43,12 @@ void OUT_output( char *PATH ){
             /* calculate total expense and balance */
             detail.total_expense = calexpense( detail.total_expense, detail.Ccash );
             detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );    
-            caldetail( detail.Ditem, detail.Dcash );
+            caldetail( &detail ); 
 
         } /* end while */       
+
+	/* show detail expenditure */ 
+	getdetail( &detail ); 
 
     } /* end if else */
 
@@ -65,19 +67,21 @@ int calbalance( size_t cal_Dcash, size_t cal_Ccash, size_t cal_balance ){
 }
 
 /* calculate the expenditure of that month */ 
-void caldetail( char *Ditem, size_t Dcash ){ 
-    if( Ditem == "eating" ) 
-        D_eating += Dcash; 
-    else if( Ditem == "expense" ) 
-        D_expense += Dcash; 
-    else if( Ditem == "transfee" ) 
-        D_trans_fee += Dcash; 
+void caldetail( struct item *detail ){ 
+    if( strcmp( detail->Citem, "eating" ) == 0 )  
+        detail->T_eating += detail->Ccash; 
+    else if( strcmp( detail->Citem, "expense" ) == 0 ) 
+        detail->T_expense += detail->Ccash; 
+    else if( strcmp( detail->Citem, "transfee" ) == 0 ) 
+        detail->T_transfee += detail->Ccash; 
 } 
-void getdetail( void ){ 
+
+/* get the expense detail */ 
+void getdetail( struct item *detail ){ 
     printf( "\nYour expenditure detail show below:\n" ); 
-    printf( "%10s : %5d\n", "eating", D_eating ); 
-    printf( "%10s : %5d\n", "expense", D_expense ); 
-    printf( "%10s : %5d\n", "transfee", D_trans_fee ); 
+    printf( "%10s : %5d\n", "eating", detail->T_eating ); 
+    printf( "%10s : %5d\n", "expense", detail->T_expense ); 
+    printf( "%10s : %5d\n", "transfee", detail->T_transfee ); 
     printf( "\n" ); 
 } 
 

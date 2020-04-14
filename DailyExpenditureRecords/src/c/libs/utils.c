@@ -35,7 +35,7 @@ void Options( char *PATH, int choose ){
                 printf( "***Your account show below detailly.***\n" );
                 OUT_output( PATH );
                 break;
-            case 4: 
+            case 3: 
                 printf( "%s", "\n**********************************************\n"); 
                 printf( " detail expenditure of this month shows below.\n\n" ); 
                 getdetail(); 
