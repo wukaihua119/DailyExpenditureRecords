@@ -5,7 +5,7 @@
 #include <string.h> 
 
 #ifdef _WIN32 
-    #define show_databases "echo 'Here are the existing databases...'\ndir databases"
+    #define show_databases "echo Here are the existing databases... & dir databases"
 #else 
     #define show_databases "#!/bin/bash \n echo 'Here are the existing databases...'\n ls ./databases" 
 #endif 
