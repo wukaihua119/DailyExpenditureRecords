@@ -4,6 +4,7 @@ CC = gcc
 FLAG = -Wall -pedantic 
 # Delete object files.
 RM = rm
+ERASE = erase
 # Path 
 LIBS_CODE_PATH=./DailyExpenditureRecords/src/c/libs/
 CODE_PATH=./DailyExpenditureRecords/src/c/
@@ -39,4 +40,9 @@ OUT.o: $(LIBS_CODE_PATH)OUT.h $(LIBS_CODE_PATH)OUT.c
 clean:
 	@echo 'Cleaning code...' 
 	$(RM) -rf *.o 
+	@echo 'Done...' 
+
+cleanWin:
+	@echo 'Cleaning code...' 
+	$(ERASE) *.o 
 	@echo 'Done...' 
