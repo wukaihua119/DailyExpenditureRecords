@@ -79,9 +79,9 @@ void caldetail( struct item *detail ){
 /* get the expense detail */ 
 void getdetail( struct item *detail ){ 
     printf( "\nYour expenditure detail show below:\n" ); 
-    printf( "%10s : %5d\n", "eating", detail->T_eating ); 
-    printf( "%10s : %5d\n", "expense", detail->T_expense ); 
-    printf( "%10s : %5d\n", "transfee", detail->T_transfee ); 
+    printf( "%10s : %5ld\n", "eating", detail->T_eating ); 
+    printf( "%10s : %5ld\n", "expense", detail->T_expense ); 
+    printf( "%10s : %5ld\n", "transfee", detail->T_transfee ); 
     printf( "\n" ); 
 } 
 
