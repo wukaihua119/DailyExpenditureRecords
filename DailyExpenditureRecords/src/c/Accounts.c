@@ -13,16 +13,16 @@ int main( void ){
     printf("\n\nWelcome to DailyExpenditure...\n\n\n\n"); 
     
     PATH = getFileName(); 
-    printf( "\n\n\"1\" to input and output,\n\"2\" to output, \n\"3\" to open or recreate new file, \n\"0\" to end.\n" ); 
+    printf( "\n\n\"1\" to input and output,\n\"2\" to output,\n\"3\" to show detail expenditure,\n\"4\" to open or recreate new file,\n\"0\" to end.\n" ); 
     scanf( "%d", &choose ); 
    
     while( choose != 0 ){ 
-        if( choose == 3 ) 
+        if( choose == 4 ) 
             PATH = getFileName(); 
         else 
             Options( PATH, choose ); 
          
-        printf( "\n\n\"1\" to input and output,\n\"2\" to output, \n\"3\" to open or recreate new file, \n\"0\" to end.\n" ); 
+        printf( "\n\n\"1\" to input and output,\n\"2\" to output,\n\"3\" to show detail expenditure,\n\"4\" to open or recreate new file,\n\"0\" to end.\n" ); 
         scanf( "%d", &choose ); 
     }
     

@@ -26,7 +26,7 @@ void Options( char *PATH, int choose ){
             case 1: 
                 IN_input( PATH );
                 printf( "%s", "\n**********************************************\n"); 
-                printf( "\***Your account show below detailly.***\n" );
+                printf( "***Your account show below detailly.***\n" );
                 OUT_output( PATH );
             break;
             /*print out the account */
@@ -35,10 +35,10 @@ void Options( char *PATH, int choose ){
                 printf( "***Your account show below detailly.***\n" );
                 OUT_output( PATH );
                 break;
-            case 4: 
+            case 3: 
                 printf( "%s", "\n**********************************************\n"); 
                 printf( " detail expenditure of this month shows below.\n\n" ); 
-                caldetail(); 
+                getdetail(); 
                 break; 
             /* run into error */
             default:

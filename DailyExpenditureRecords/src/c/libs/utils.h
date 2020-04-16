@@ -16,6 +16,9 @@ struct item{
     size_t Ccash;
     size_t total_expense;
     size_t balance;
+    size_t T_eating; 
+    size_t T_transfee; 
+    size_t T_expense; 
 };
 
 struct item detail;
