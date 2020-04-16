@@ -4,7 +4,12 @@
 #include <stdio.h> 
 #include <string.h> 
 
-#define show_databases "#!/bin/bash \n echo 'Here are the existing databases...'\n ls ./databases" 
+#ifdef _WIN32 
+    #define show_databases "echo Here are the existing databases... & dir databases"
+#else 
+    #define show_databases "#!/bin/bash \n echo 'Here are the existing databases...'\n ls ./databases" 
+#endif 
+
 
 /* define a struct */
 struct item{
