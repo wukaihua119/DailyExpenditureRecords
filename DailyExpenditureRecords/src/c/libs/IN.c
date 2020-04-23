@@ -14,8 +14,6 @@ void IN_input( char *PATH ){
         printf( "Ctrl-D for Linux and MacOS, Ctrl-Z for Windows..\n" ); 
         printf( "// " );
 
-
-
         /* input value to var */
         scanf( "%zu%s%s%s%zu%zu", 
             &(detail.date), detail.Ditem, detail.Citem, detail.ref, &(detail.Dcash), &(detail.Ccash) );
