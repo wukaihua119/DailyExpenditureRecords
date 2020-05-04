@@ -30,15 +30,21 @@ void OUT_output( char *PATH ){
         detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );     
         caldetail( &detail ); 
 
-        while( !feof( fPtr ) ){
+        /* print the value to .dat */
+        printf( "%9ld%8s%8s%13s%8ld%8ld%15ld%9ld\n", 
+                detail.date, detail.Ditem, detail.Citem, detail.ref, detail.Dcash, detail.Ccash, detail.total_expense, detail.balance );
+
+//      while( !feof( fPtr ) ){ // this condition will causing the problem that the pointer will read the last line twice. 
+        while( fscanf( fPtr, "%9zu%7s%9s%11s%7zu%7zu", 
+                    &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash ) == 6 ){ 
 
             /* print the value to .dat */
             printf( "%9ld%8s%8s%13s%8ld%8ld%15ld%9ld\n", 
                     detail.date, detail.Ditem, detail.Citem, detail.ref, detail.Dcash, detail.Ccash, detail.total_expense, detail.balance );
 
             /* read the contents form file */
-            fscanf( fPtr, "%9zu%7s%9s%11s%7zu%7zu", 
-                    &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash );
+            //fscanf( fPtr, "%9zu%7s%9s%11s%7zu%7zu", 
+            //        &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash );
             
             /* calculate total expense and balance */
             detail.total_expense = calexpense( detail.total_expense, detail.Ccash );
@@ -79,9 +85,9 @@ void caldetail( struct item *detail ){
 /* get the expense detail */ 
 void getdetail( struct item *detail ){ 
     printf( "\nYour expenditure detail show below:\n" ); 
-    printf( "%10s : %5d\n", "eating", detail->T_eating ); 
-    printf( "%10s : %5d\n", "expense", detail->T_expense ); 
-    printf( "%10s : %5d\n", "transfee", detail->T_transfee ); 
+    printf( "%10s : %5ld\n", "eating", detail->T_eating ); 
+    printf( "%10s : %5ld\n", "expense", detail->T_expense ); 
+    printf( "%10s : %5ld\n", "transfee", detail->T_transfee ); 
     printf( "\n" ); 
 } 
 
