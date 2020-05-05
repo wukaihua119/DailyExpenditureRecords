@@ -35,7 +35,7 @@ void OUT_output( char *PATH ){
                 detail.date, detail.Ditem, detail.Citem, detail.ref, detail.Dcash, detail.Ccash, detail.total_expense, detail.balance );
 
         while( fscanf( fPtr, "%9zu%7s%9s%11s%7zu%7zu", 
-                    &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash ) == 6 ){ 
+                    &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash ) != EOF ){ 
         
             detail.total_expense = calexpense( detail.total_expense, detail.Ccash );
             detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );     
