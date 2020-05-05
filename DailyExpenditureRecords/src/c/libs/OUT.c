@@ -34,7 +34,6 @@ void OUT_output( char *PATH ){
         printf( "%9ld%8s%8s%13s%8ld%8ld%15ld%9ld\n", 
                 detail.date, detail.Ditem, detail.Citem, detail.ref, detail.Dcash, detail.Ccash, detail.total_expense, detail.balance );
 
-//      while( !feof( fPtr ) ){ // this condition will causing the problem that the pointer will read the last line twice. 
         while( fscanf( fPtr, "%9zu%7s%9s%11s%7zu%7zu", 
                     &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash ) == 6 ){ 
         
@@ -45,13 +44,8 @@ void OUT_output( char *PATH ){
             printf( "%9ld%8s%8s%13s%8ld%8ld%15ld%9ld\n", 
                     detail.date, detail.Ditem, detail.Citem, detail.ref, detail.Dcash, detail.Ccash, detail.total_expense, detail.balance );
 
-            /* read the contents form file */
-            //fscanf( fPtr, "%9zu%7s%9s%11s%7zu%7zu", 
-            //        &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash );
             
-            /* calculate total expense and balance */
-            detail.total_expense = calexpense( detail.total_expense, detail.Ccash );
-            detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );    
+            /* calculate detail expense */
             caldetail( &detail ); 
 
         } /* end while */       
