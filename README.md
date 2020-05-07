@@ -1,18 +1,26 @@
-# <center> DailyExpenditureRecords</center>
-You need a tool to record daily expenditure and your cash flow if you have the hard time saving money. The DailyExpenditureRecords is born for those who spend their money unnoticeable. 
-
+# <center>DailyExpenditureRecords</center> 
 ## Introduction 
-The DailyExpenditureRecords is an application that record your daily expenditure and track your cash flow in order to make good use of your money and more effeciently. <br/> 
-This application is developed using C on Ubuntu 18.04 LTS. 
-<br/> 
+You need a tool to record daily expenditure and your cash flow if you have the hard time saving money. The DailyExpenditureRecords is born for those who spend their money unnoticeable. 
+The DailyExpenditureRecords is an application that record your daily expenditure and track your cash flow in order to make good use of your money and more effeciently. <br> 
+<br> 
+
+This application is developed using <br> 
+1. Programming language: C 
+2. Compiler: GNU GCC 7.5.0 
+3. Built tool: GNU Make 4.1 
+
+## Requirements 
+1. GNU GCC 
+2. Make 
 
 ## Features
 * Record daily expense.
 * Record daily income.
-* Uncover and track the detail of cash flow.
+* Uncover and keep track on the detail of cash flow.
 * Calculate your total balance and expense automatically.
+* Calculate your expense on eat, transportation, and other things. 
 
-## How to use 
+## Install  
 To use this application, you need to clone this repository. 
 ```
     $ git clone https://github.com/wukaihua119/DailyExpenditureRecords.git  
@@ -21,6 +29,10 @@ Move to the root directory of this project. Run the command below if you are the
 ```
     // only compile the souce code. 
     $ make build  
+    // or run for unix-like system. 
+    $ ./startup.sh 
+    // windows 
+    $ startup.bat 
 ```
 or 
 ```
@@ -28,14 +40,21 @@ or
     $ make build_exec 
 ```
 
-<br/> 
+## Start to use 
+To Start the application 
+```
+    $ make exec 
+```
+You can run command ``` $./Account ``` under Unix-like system or ``` $Account.exe ```under Windows. 
 
-Run the command ``` $ make exec ``` to run this application. 
-<br/> 
-<br/> 
-<br/> 
-<br/> 
+After execute above command you can input your existing filename or just type the new filename to create a new file.  
 
-### Todo list 
-* Multiple file management system 
-* Output the detail results into file 
+![start](./DailyExpenditureRecords/resource/pics/start.png)
+
+Then you are in the main menu. Just choose one. 
+
+![menu](./menu.png) 
+
+After inputing your records you will see the results. 
+
+![detail](./detail.png)
