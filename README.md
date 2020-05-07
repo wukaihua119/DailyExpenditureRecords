@@ -1,4 +1,4 @@
-# <center>DailyExpenditureRecords</center> 
+# <center> DailyExpenditureRecords </center> 
 ## Introduction 
 You need a tool to record daily expenditure and your cash flow if you have the hard time saving money. The DailyExpenditureRecords is born for those who spend their money unnoticeable. 
 The DailyExpenditureRecords is an application that record your daily expenditure and track your cash flow in order to make good use of your money and more effeciently. <br> 
