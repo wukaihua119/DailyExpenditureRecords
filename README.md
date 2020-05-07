@@ -49,12 +49,12 @@ You can run command ``` $./Account ``` under Unix-like system or ``` $Account.ex
 
 After execute above command you can input your existing filename or just type the new filename to create a new file.  
 
-![start](./DailyExpenditureRecords/resource/pics/start.png)
+![start](https://github.com/wukaihua119/DailyExpenditureRecords/blob/master/DailyExpenditureRecords/resource/pics/start.PNG)
 
 Then you are in the main menu. Just choose one. 
 
-![menu](./menu.png) 
+![menu](https://github.com/wukaihua119/DailyExpenditureRecords/blob/master/DailyExpenditureRecords/resource/pics/menu.PNG) 
 
 After inputing your records you will see the results. 
 
-![detail](./detail.png)
+![detail](https://github.com/wukaihua119/DailyExpenditureRecords/blob/master/DailyExpenditureRecords/resource/pics/detail.PNG)
