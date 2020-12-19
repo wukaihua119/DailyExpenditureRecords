@@ -5,3 +5,6 @@ DailyExpenditureRecords/src/**/*.o
 DailyExpenditureRecords/src/**/*.txt 
 *.out
 *.o
+
+tags
+cscope.*
