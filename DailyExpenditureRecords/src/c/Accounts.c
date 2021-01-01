@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h> 
 #include "./libs/IN.h"
 #include "./libs/OUT.h"
 #include "./libs/utils.h"
@@ -27,7 +28,9 @@ int main( void ){
     }
     
     printf( "Bye!\n" ); 
+
     free( PATH ); 
+
     return 0;
 }
 
