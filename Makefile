@@ -18,12 +18,15 @@ exec:
 build_and_exec: build clean 
 	./Accounts 
 
-build:  Accounts clean 
+build: Accounts clean 
 	@echo 'Compile the source code...' 
 	@echo 'Done...' 
 
-Accounts: Accounts.o utils.o IN.o OUT.o  
+Accounts: Accounts.o package 
 	$(CC) -o Accounts $(FLAG) Accounts.o utils.o IN.o OUT.o  
+
+package: utils.o IN.o OUT.o 
+	$(CC) -shared -o libtest.so utils.o IN.o OUT.o 
 
 Accounts.o: $(CODE_PATH)Accounts.c $(LIBS_CODE_PATH)IN.h $(LIBS_CODE_PATH)OUT.h
 	$(CC) $(FLAG) -c $(CODE_PATH)Accounts.c 
