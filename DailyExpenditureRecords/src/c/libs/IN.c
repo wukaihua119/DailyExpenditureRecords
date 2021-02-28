@@ -20,7 +20,7 @@ void IN_input( char *PATH ){
 
         /* write account, name and balance into file with fprintf */
         while ( !feof( stdin ) ) { 
-            fprintf( fPtr, "%9ld%7s%9s%11s%7ld%7ld\n", 
+            fprintf( fPtr, "%9ld%7s%9s%42s%7ld%7ld\n", 
                 detail.date, detail.Ditem, detail.Citem, detail.ref, detail.Dcash, detail.Ccash );
             printf( "// " );
             scanf( "%zu%s%s%s%zu%zu", 
