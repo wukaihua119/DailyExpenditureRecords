@@ -18,11 +18,11 @@ void OUT_output( char *PATH ){
     }else {
 
         /* print the titles */
-        printf( "%9s%8s%8s%13s%8s%8s%15s%9s\n", 
+        printf( "%9s%8s%8s%42s%8s%8s%15s%9s\n", 
                 "date", "Ditem", "Citem", "reference", "Dcash", "Ccash", "total_expense", "balance" );
 
         /* read the contents form file */
-        fscanf( fPtr, "%9zu%7s%9s%11s%7zu%7zu", 
+        fscanf( fPtr, "%9zu%7s%9s%42s%7zu%7zu", 
                 &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash );
 
         /* calculate total expense and balance */
@@ -31,17 +31,17 @@ void OUT_output( char *PATH ){
         caldetail( &detail ); 
 
         /* print the value to .dat */
-        printf( "%9ld%8s%8s%13s%8ld%8ld%15ld%9ld\n", 
+        printf( "%9ld%8s%8s%42s%8ld%8ld%15ld%9ld\n", 
                 detail.date, detail.Ditem, detail.Citem, detail.ref, detail.Dcash, detail.Ccash, detail.total_expense, detail.balance );
 
-        while( fscanf( fPtr, "%9zu%7s%9s%11s%7zu%7zu", 
+        while( fscanf( fPtr, "%9zu%7s%9s%42s%7zu%7zu", 
                     &detail.date, detail.Ditem, detail.Citem, detail.ref, &detail.Dcash, &detail.Ccash ) != EOF ){ 
         
             detail.total_expense = calexpense( detail.total_expense, detail.Ccash );
             detail.balance = calbalance( detail.Dcash, detail.Ccash, detail.balance );     
 
             /* print the value to .dat */
-            printf( "%9ld%8s%8s%13s%8ld%8ld%15ld%9ld\n", 
+            printf( "%9ld%8s%8s%42s%8ld%8ld%15ld%9ld\n", 
                     detail.date, detail.Ditem, detail.Citem, detail.ref, detail.Dcash, detail.Ccash, detail.total_expense, detail.balance );
 
             

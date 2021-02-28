@@ -16,7 +16,7 @@ struct item{
     size_t date;
     char Ditem[10];
     char Citem[10];
-    char ref[10];
+    char ref[40];
     size_t Dcash;
     size_t Ccash;
     size_t total_expense;
