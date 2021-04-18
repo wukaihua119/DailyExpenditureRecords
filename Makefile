@@ -9,7 +9,7 @@ ERASE = erase
 LIBS_CODE_PATH=./DailyExpenditureRecords/src/c/libs/
 CODE_PATH=./DailyExpenditureRecords/src/c/
 
-.PHONY: clean exec build_and_exec build
+.PHONY: clean cleanWin exec build_and_exec build
 
 # Combine object files to form a binary execuatable file as Accounts
 exec:  
